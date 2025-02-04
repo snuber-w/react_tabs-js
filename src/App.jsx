@@ -22,14 +22,7 @@ export const App = () => {
       <Tabs
         tabs={tabs}
         activeTabId={activeTabId}
-        onTabSelected={id => {
-          if (id === activeTabId) return;
-          if (!tabs.find(tab => tab.id === id)) {
-            setActiveTabId(tabs[0].id);
-          }
-
-          setActiveTabId(id);
-        }}
+        onTabSelected={id => setActiveTabId(id)}
       />
     </div>
   );
